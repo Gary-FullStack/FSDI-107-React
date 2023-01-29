@@ -1,12 +1,12 @@
 
 import "./footer.css";
 
-function Footer(){
-	return(
+function Footer() {
+	return (
 
 		<div className="footer">
-			<hr></hr>
-			<label>Gary M.</label>
+			<hr className="newFoot"></hr>
+			<label> &copy; 2023  Gary M.</label>
 		</div>
 	);
 
