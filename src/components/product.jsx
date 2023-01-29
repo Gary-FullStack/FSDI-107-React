@@ -15,7 +15,7 @@ function Product() {
 
 
 			<QuantityPicker></QuantityPicker>
-			<button>Add</button>
+			<button className="btn btn-sm btn-outline-success" >Add</button>
 
 		</div>
 	);
