@@ -6,7 +6,7 @@ function Footer() {
 
 		<div className="footer">
 			<hr className="newFoot"></hr>
-			<label> &copy; 2023  Gary M.</label>
+			<label className="copy"> &copy; 2023  Gary M.</label>
 		</div>
 	);
 

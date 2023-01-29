@@ -1,0 +1,27 @@
+.product {
+  border: 2px solid greenyellow;
+  border-radius: 10px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+
+  width: 200px;
+  height: 300px;
+}
+
+.product:hover {
+  border-color: darkmagenta;
+  border: 3px solid;
+}
+
+.product .prices {
+  display: flex;
+}
+
+.product .prices label {
+  flex: 1;
+}
+
+.prices {
+  color: blue;
+}

@@ -1,5 +1,8 @@
 .newFoot {
-  color: green;
   border: 10px solid green;
   border-radius: 5px;
+}
+
+.copy {
+  color: red;
 }
