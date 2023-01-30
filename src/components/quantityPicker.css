@@ -1,6 +1,7 @@
 .qPicker label {
-  margin: 0 5px;
-  padding: 6px;
+  margin-bottom: 0px;
+  padding: 5px;
+  padding: 2px;
   color: red;
   display: inline-block;
 }

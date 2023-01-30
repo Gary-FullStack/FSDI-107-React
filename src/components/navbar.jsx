@@ -1,9 +1,12 @@
 
 import "./navbar.css";
 
-function Navbar (){
-	return(
+function Navbar() {
+	return (
+
 		<div className="navbar">Menu goes Here</div>
+
+
 
 	);
 }

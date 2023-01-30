@@ -1,17 +1,26 @@
+body {
+  background-color: wheat;
+}
+
+img {
+  margin-top: 10px;
+  width: 150px;
+  height: 150px;
+}
+
 .product {
-  border: 2px solid greenyellow;
+  border: 2px solid rgb(16, 26, 1);
   border-radius: 10px;
   margin-right: 5px;
   margin-bottom: 10px;
   display: inline-block;
-
   width: 200px;
   height: 300px;
 }
 
 .product:hover {
-  border-color: darkmagenta;
-  border: 3px solid;
+  border: 3px solid red;
+  background-color: aliceblue;
 }
 
 .product .prices {
@@ -27,5 +36,5 @@
 }
 
 button {
-  margin-bottom: 10px;
+  padding: 5px;
 }
