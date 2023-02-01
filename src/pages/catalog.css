@@ -1,3 +1,11 @@
 .catalog h1 {
   color: blue;
 }
+
+.catalog h5 {
+  color: red;
+}
+
+.catalog {
+  background-color: rgb(247, 245, 242);
+}

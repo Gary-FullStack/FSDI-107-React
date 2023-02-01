@@ -3,24 +3,20 @@ import QuantityPicker from "./quantityPicker";
 import { useEffect } from 'react';
 
 
-
-function Product() {
+function Product(props) {
 
 	useEffect(function () {
 		console.log("Hiya, I'm a tasty product!");
 	}, []);
 
-
-
-
 	return (
 		<div className="product">
-			<img src="../images/oranges.jpg" alt="pic"></img>
-			<h5>Product name here</h5>
+			<img src={"/images/" + props.data.image} alt="pic"></img>
+			<h5>{props.data.title}</h5>
 
 			<div className="prices">
-				<label>Total</label>
-				<label>Price</label>
+				<label>Price ${props.data.price.toFixed(2)}</label>
+				<label>Total ${props.data.price.toFixed(2)}</label>
 			</div>
 
 			<QuantityPicker></QuantityPicker>
