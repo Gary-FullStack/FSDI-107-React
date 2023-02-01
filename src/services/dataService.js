@@ -3,16 +3,16 @@ var catalog = [
 	{
 		"title": "orange",
 		"category": "fruits",
-		"price": 1.50,
+		"price": .50,
 		"image": "oranges.jpg",
 		"_id": "photo1"
 	},
 
 	{
-		"title": "orange",
-		"category": "fruits",
-		"price": 1.50,
-		"image": "oranges.jpg",
+		"title": "Green Bell pepper",
+		"category": "veggy",
+		"price": .75,
+		"image": "bellpepper.jpg",
 		"_id": "photo2"
 	},
 
@@ -94,8 +94,22 @@ var catalog = [
 		"price": 1.50,
 		"image": "oranges.jpg",
 		"_id": "photo12"
+	},
+
+
+
+];
+
+class DataService {
+
+	getProducts() {
+		//no server side, so this is a mock-up.
+
+		return catalog;
 	}
 
 
 
-]
+}
+
+export default DataService;

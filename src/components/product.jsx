@@ -1,9 +1,17 @@
 import "./product.css";
 import QuantityPicker from "./quantityPicker";
+import { useEffect } from 'react';
 
 
 
 function Product() {
+
+	useEffect(function () {
+		console.log("Hiya, I'm a tasty product!");
+	}, []);
+
+
+
 
 	return (
 		<div className="product">
