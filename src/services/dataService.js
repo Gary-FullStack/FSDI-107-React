@@ -26,7 +26,7 @@ var catalog = [
 
 	{
 		"title": "Carrots",
-		"category": "fruits",
+		"category": "veggy",
 		"price": 1.50,
 		"image": "carrots.jpg",
 		"_id": "photo4"
@@ -34,7 +34,7 @@ var catalog = [
 
 	{
 		"title": "greenbeans",
-		"category": "fruits",
+		"category": "veggy",
 		"price": 5.50,
 		"image": "greenbeans.jpg",
 		"_id": "photo5"
@@ -42,7 +42,7 @@ var catalog = [
 
 	{
 		"title": "chilies",
-		"category": "fruits",
+		"category": "veggy",
 		"price": 2.50,
 		"image": "chilies.jpg",
 		"_id": "photo6"
@@ -50,7 +50,7 @@ var catalog = [
 
 	{
 		"title": "redonion",
-		"category": "fruits",
+		"category": "veggy",
 		"price": 3.50,
 		"image": "redonion.jpg",
 		"_id": "photo7"
@@ -66,7 +66,7 @@ var catalog = [
 
 	{
 		"title": "zuccini",
-		"category": "fruits",
+		"category": "veggy",
 		"price": 1.50,
 		"image": "zuccini.jpg",
 		"_id": "photo9"
