@@ -32,7 +32,7 @@ function Catalog() {
 
 	function filter(category) {
 		let list = [];
-		//find the products that are being called by the button category
+		//find the product that are being called by the button category
 		for (let i = 0; i < products.length; i++) {
 			let prod = products[i];
 			if (prod.category === category) {
