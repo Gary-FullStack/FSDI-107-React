@@ -21,8 +21,6 @@ function AdminCouponCodes() {
 
 	}
 
-
-
 	return (
 
 		< div className="ad-coupons" >
@@ -39,8 +37,6 @@ function AdminCouponCodes() {
 				<input name="discount" onChange={textChanged} className="form-control" type="number" />
 			</div>
 
-
-
 			<div className="input-form">
 				<button onClick={save} className="btn btn-md btn-dark" id="button1">Save </button>
 
@@ -53,7 +49,6 @@ function AdminCouponCodes() {
 	);
 
 }
-
 
 
 

@@ -15,7 +15,6 @@ function Admin() {
 				<AdminCouponCodes></AdminCouponCodes>
 
 			</div>
-
 		</div>
 
 	);

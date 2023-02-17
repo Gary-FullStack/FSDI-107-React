@@ -12,7 +12,6 @@ function Home() {
 			<Link className="btn btn-primary" to="/catalog"> View our Great Produce  </Link>
 		</div >
 	);
-
 }
 
 export default Home;

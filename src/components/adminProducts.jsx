@@ -25,7 +25,6 @@ function AdminProducts() {
 		setAllProducts(copy);
 	}
 
-
 	return (
 		< div className="ad-products" >
 			<h3> Create a new product </h3>
