@@ -1,0 +1,10 @@
+.ad-products {
+  display: block;
+  width: 500px;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+#button1 {
+  padding-bottom: 10px;
+}

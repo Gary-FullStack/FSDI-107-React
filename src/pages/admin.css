@@ -1,3 +1,8 @@
 .admin {
-  color: blue;
+  background-color: burlywood;
+}
+
+.admin .parent {
+  display: flex;
+  justify-content: space-around;
 }
