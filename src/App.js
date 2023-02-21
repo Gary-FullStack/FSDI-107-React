@@ -11,35 +11,32 @@ import About from './pages/about';
 import Home from './pages/home';
 import NotFound from './pages/notFound';
 
-
-
-
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-
+import GlobalData from './store/globalData';
 
 function App() {
   return (
+    <GlobalData>
 
-    <BrowserRouter>
+      <BrowserRouter>
 
-      <div className="App">
+        <div className="App">
 
-        <Navbar></Navbar>
+          <Navbar></Navbar>
 
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/catalog" element={<Catalog />}></Route>
-          <Route path="/admin" element={<Admin />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="*" element={<NotFound />}></Route>
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/catalog" element={<Catalog />}></Route>
+            <Route path="/admin" element={<Admin />}></Route>
+            <Route path="/about" element={<About />}></Route>
+            <Route path="*" element={<NotFound />}></Route>
+          </Routes>
 
-        <Footer></Footer>
+          <Footer></Footer>
 
-      </div>
-    </BrowserRouter>
+        </div>
+      </BrowserRouter>
+    </GlobalData>
 
   );
 }

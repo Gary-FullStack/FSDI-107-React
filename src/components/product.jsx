@@ -1,6 +1,7 @@
 import "./product.css";
 import QuantityPicker from "./quantityPicker";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import DataContext from "../store/dataContext";
 
 
 function Product(props) {
@@ -10,6 +11,9 @@ function Product(props) {
 	useEffect(function () {
 		console.log("Hiya, I'm a tasty product!");
 	}, []);
+
+
+	let addProductsToCart = useContext(DataContext).addProductsToCart;
 
 	function onQuantityChange(qty) {
 		console.log(" update value: " + qty);
@@ -21,8 +25,13 @@ function Product(props) {
 		return total.toFixed(2);
 	}
 
-	function logItem() {
+	function addProduct() {
 		console.log("Adding " + quantity + " " + props.data.title);
+	}
+
+	function handleAdd() {
+		console.log("I've been clicked!", props.data);
+		addProductsToCart();
 
 	}
 
@@ -37,7 +46,7 @@ function Product(props) {
 			</div>
 
 			<QuantityPicker onChange={onQuantityChange} ></QuantityPicker>
-			<button onClick={logItem} className="btn btn-sm btn-outline-success" >Add</button>
+			<button onClick={handleAdd} className="btn btn-sm btn-outline-success" >Add</button>
 
 		</div>
 	);
