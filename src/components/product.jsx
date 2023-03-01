@@ -31,7 +31,7 @@ function Product(props) {
 
 	function handleAdd() {
 		console.log("I've been clicked!", props.data);
-		addProductsToCart();
+		addProductsToCart(props.data);
 
 	}
 

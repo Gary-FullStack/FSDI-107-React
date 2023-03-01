@@ -1,10 +1,22 @@
 import "./adminProducts.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import DataService from '../services/dataService';
 
 
 function AdminProducts() {
 	const [product, setProduct] = useState({});
 	const [allProducts, setAllProducts] = useState([]);
+
+	useEffect(function () {
+		loadProducts();
+	}, []);
+
+	async function loadProducts() {
+		let service = new DataService();
+		let prods = await service.getProducts();
+		setAllProducts(prods);
+	}
+
 
 
 	function textChanged(e) {
@@ -19,6 +31,10 @@ function AdminProducts() {
 
 	function saveProduct() {
 		console.log(product);
+		let savedProd = { ...product };
+		savedProd.price = parseFloat(savedProd.price);
+		let service = new DataService();
+		service.saveProduct(savedProd);
 
 		let copy = [...allProducts];
 		copy.push(product);
@@ -42,8 +58,8 @@ function AdminProducts() {
 
 
 			<div className="input-form">
-				<label className="form-label">Image name</label>
-				<input name="imageName" onChange={textChanged} className="form-control" type="text" />
+				<label className="form-label">image</label>
+				<input name="image" onChange={textChanged} className="form-control" type="text" />
 			</div>
 
 			<div className="input-form">
@@ -56,9 +72,9 @@ function AdminProducts() {
 
 			</div>
 
-			<ul>
-				{allProducts.map(prod => <li key={prod.title}>{prod.title}</li>)}
-			</ul>
+			<ol className="list-group list-group-numbered">
+				{allProducts.map(prod => <li className="list-group-item" key={prod.title}>{prod.title} - ${prod.price}</li>)}
+			</ol>
 		</div >
 	);
 

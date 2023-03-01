@@ -1,6 +1,7 @@
-
 import { useState } from 'react';
 import DataContext from "./dataContext";
+
+
 
 
 function GlobalData(props) {
@@ -8,9 +9,14 @@ function GlobalData(props) {
 	const [fakeuser, setFakeUser] = useState({ name: "FakeBoy" });
 
 
-	function addProductsToCart() {
+	function addProductsToCart(product) {
 		console.log("Global is called");
+		let copy = [...cart];
+		copy.push(product);
+		setCart(copy);
+
 	}
+
 	function removeProductsFromCart() { }
 
 
@@ -20,14 +26,14 @@ function GlobalData(props) {
 				cart: cart,
 				user: fakeuser,
 				addProductsToCart: addProductsToCart,
-				removeProductsFromCart: removeProductsFromCart
+				removeProductsFromCart: removeProductsFromCart,
 			}}
 
 		>
 			{props.children}
-		</DataContext.Provider >
 
-	)
+		</DataContext.Provider>
+	);
 
 }
 

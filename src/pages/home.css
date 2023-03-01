@@ -2,3 +2,19 @@
   color: blue;
   background-color: wheat;
 }
+
+.homeImg {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .homeImg {
+    max-width: 35%;
+  }
+}

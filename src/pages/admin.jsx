@@ -1,5 +1,5 @@
 import "./admin.css";
-import AdminProducts from './../components/adminProducts';
+import AdminProducts from "../components/adminProducts";
 import AdminCouponCodes from "../components/adminCouponCodes";
 
 

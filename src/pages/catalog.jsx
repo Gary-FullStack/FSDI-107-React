@@ -1,6 +1,5 @@
-
-import Product from "../components/product";
 import { useEffect, useState } from "react";
+import Product from "../components/product";
 import DataService from "../services/dataService";
 import "./catalog.css";
 
@@ -11,28 +10,28 @@ function Catalog() {
 	const [prodsToDisplay, setProdsToDisplay] = useState([]);
 
 	useEffect(function () {
-		console.log("component loaded")
+		console.log("loaded from catalog");
 		loadCatalog();
-	}, []); //empty dependency [] means run code only once during load
+	}, []);
 
-	function loadCatalog() {
-		//use to get the product list
+
+	async function loadCatalog() {
+
 		let service = new DataService();
-		let prods = service.getProducts();
-		console.log(prods);
+		let prods = await service.getProducts();
 		setProducts(prods);
 		setProdsToDisplay(prods);
 
-		//needs to be moved to a service
 		let cats = ["fruits", "veggy"];
 		setCategories(cats);
 
 	}
 
 
+
 	function filter(category) {
 		let list = [];
-		//find the product that are being called by the button category
+
 		for (let i = 0; i < products.length; i++) {
 			let prod = products[i];
 			if (prod.category === category) {
@@ -51,18 +50,17 @@ function Catalog() {
 		<div className="catalog">
 			<h1> Farmer's Market Fresh Items!</h1>
 			<h5>Look At these {products.length} new delicious items!</h5>
-
 			<br />
-
 			<button onClick={clearFilter} className="btn btn-danger btn-filter">Show All</button>
 
-
-			{/* render category into a button*/}
 			{categories.map(c => <button key={c} onClick={() => filter(c)} className="btn btn-danger btn-cat">{c}</button>)}
-			<br />
 
-			{/* Use array transform to take verbose product list */}
-			{prodsToDisplay.map(p => <Product key={p._id} data={p}></Product>)}
+
+			<div className="itemCard">
+
+				{prodsToDisplay.map(p => <Product key={p._id} data={p}></Product>)}
+
+			</div>
 
 		</div>
 

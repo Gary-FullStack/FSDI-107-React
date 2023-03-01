@@ -13,3 +13,10 @@
 .btn-cat {
   margin: 5px;
 }
+
+.itemCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

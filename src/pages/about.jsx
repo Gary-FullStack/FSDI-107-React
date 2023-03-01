@@ -48,7 +48,7 @@ function About() {
 			<h4>About Me</h4>
 			<h3> Gary M.</h3>
 			<h5>{getEmail()}</h5>
-			<button class="btn btn-primary" onClick={toggleEmail}> click this to see my Email</button>
+			<button className="btn btn-primary" onClick={toggleEmail}> click this to see my Email</button>
 
 			<hr />
 

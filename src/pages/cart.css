@@ -1,0 +1,23 @@
+h1 {
+  color: blue;
+}
+
+.cart .item-row {
+  display: flex;
+  padding: 10px;
+  margin: 10px 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-row img {
+  width: 100px;
+}
+
+.item-row h3 {
+  flex: 2;
+}
+
+.item-row h4 {
+  flex: 3;
+}
