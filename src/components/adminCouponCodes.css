@@ -1,0 +1,28 @@
+.ad-coupons {
+  display: block;
+  width: 300px;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.input-form {
+  padding: 2px;
+}
+
+#btn2 {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 75%;
+  opacity: 0.9;
+}
+
+#btn2:hover {
+  opacity: 1;
+}
+
+.form-control:focus {
+  border: 2px solid dodgerblue;
+}

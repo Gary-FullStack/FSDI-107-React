@@ -43,43 +43,44 @@ function AdminProducts() {
 
 	return (
 		< div className="ad-products" >
-			<h3> Create a new product </h3>
 
+			<div>
+				<h2>Add new Item</h2>
+				<div className="input-form">
+					<input name="title" onChange={textChanged} className="form-control" type="text" placeholder="title" />
+				</div>
 
-			<div className="input-form">
-				<label className="form-label">Title</label>
-				<input name="title" onChange={textChanged} className="form-control" type="text" />
-			</div>
+				<div className="input-form">
+					<input name="category" onChange={textChanged} className="form-control" type="text" placeholder="category" />
+				</div>
 
-			<div className="input-form">
-				<label className="form-label">Category</label>
-				<input name="category" onChange={textChanged} className="form-control" type="text" />
-			</div>
+				<div className="input-form">
+					<input name="image" onChange={textChanged} className="form-control" type="text" placeholder="image" />
+				</div>
 
+				<div className="input-form">
+					<input name="price" onChange={textChanged} className="form-control" type="text" placeholder="price" />
+				</div>
 
-			<div className="input-form">
-				<label className="form-label">image</label>
-				<input name="image" onChange={textChanged} className="form-control" type="text" />
-			</div>
-
-			<div className="input-form">
-				<label className="form-label">Price</label>
-				<input name="price" onChange={textChanged} className="form-control" type="number" />
-			</div>
-
-			<div className="input-form">
-				<button onClick={saveProduct} className="btn btn-md btn-dark" id="button1">Save</button>
+				<div className="input-form">
+					<button onClick={saveProduct} className="btn btn-md btn-dark" id="btn1">Save</button>
+				</div>
 
 			</div>
 
-			<ol className="list-group list-group-numbered">
-				{allProducts.map(prod => <li className="list-group-item" key={prod.title}>{prod.title} - ${prod.price}</li>)}
+			<hr />
+
+			<ol className="list-group list-group-numbered" >
+				{allProducts.map(prod => <li className="list-group-item" key={prod.title}>{prod.title} - ${prod.price} - {prod.category} <img className="thumbnail" src={"/images/" + prod.image} alt="produce"></img> </li>)}
 			</ol>
+
+
+
+
+
 		</div >
 	);
-
 }
-
 
 
 

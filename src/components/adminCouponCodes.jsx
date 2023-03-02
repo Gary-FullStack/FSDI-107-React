@@ -28,17 +28,15 @@ function AdminCouponCodes() {
 
 
 			<div className="input-form">
-				<label className="form-label">Code</label>
-				<input name="code" onChange={textChanged} className="form-control" type="text" />
+				<input name="code" onChange={textChanged} className="form-control" type="text" placeholder="add new code" />
 			</div>
 
 			<div className="input-form">
-				<label className="form-label">Discount</label>
-				<input name="discount" onChange={textChanged} className="form-control" type="number" />
+				<input name="discount" onChange={textChanged} className="form-control" type="text" placeholder="add discount amount" />
 			</div>
 
 			<div className="input-form">
-				<button onClick={save} className="btn btn-md btn-dark" id="button1">Save </button>
+				<button onClick={save} className="btn btn-md btn-dark" id="btn2">Save </button>
 
 			</div>
 
