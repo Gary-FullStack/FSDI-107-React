@@ -31,7 +31,8 @@ function Product(props) {
 
 	function handleAdd() {
 		console.log("I've been clicked!", props.data);
-		addProductsToCart(props.data);
+		let copy = { ...props.data, quantity: quantity }
+		addProductsToCart(copy);
 
 	}
 
